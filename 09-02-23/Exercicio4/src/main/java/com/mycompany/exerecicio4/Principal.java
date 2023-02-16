@@ -25,6 +25,9 @@ public class Principal {
             quan++;
         }else{
             if (num == 0) {
+                System.out.println("");
+                System.out.println("Encerrando Programa...");
+                System.out.println("Programa encerrado!");
                 exit(0);
             } 
         }
