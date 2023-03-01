@@ -1,0 +1,17 @@
+Código String
+
+fun main() {
+    val nomeUsuario = "JSilva"
+    val saudacao = "Bem-vindo, $nomeUsuario"
+    
+    println(saudacao)
+    
+    val text = 
+    """
+    		Exemplo de texto
+        	com mais de uma
+        	linha
+   	"""
+    
+    println(text)
+}
