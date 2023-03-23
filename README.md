@@ -1,2 +1,2 @@
 # DS
-Projetos das aulas de Desenvolvimento de Sistemas
+Projetos e/ou Exercícios das aulas de Desenvolvimento de Sistemas
