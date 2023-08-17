@@ -10,6 +10,7 @@ package com.mycompany.imc;
  */
 public class Pincipal {
     public static void main(String[] args) {
-        
+        MenuIMC menuPrincipal = new MenuIMC();
+        menuPrincipal.executarIMC();
     }
 }

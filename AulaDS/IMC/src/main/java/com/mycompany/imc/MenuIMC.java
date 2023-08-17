@@ -4,6 +4,9 @@
  */
 package com.mycompany.imc;
 
+import javax.swing.JOptionPane;
+import java.lang.*;
+
 /**
  *
  * @author Admin
@@ -27,7 +30,7 @@ public class MenuIMC {
             do{
                 this.executarMenuPrincipal();
                 this.avaliarOpcaoEscolhida();
-            }while(this.opcao!=5);
+            }while(this.opcao!=0);
         }
 
         private void executarMenuPrincipal(){
@@ -45,16 +48,25 @@ public class MenuIMC {
         public void avaliarOpcaoEscolhida(){
             switch(this.opcao){
                 case 1:
-
+                    String mensagemAltura = "Digite sua Altura: ";
+                    String mensagemPeso = "Digite seu Peso: ";
+                    
+                    double valorAltura = conversor.StringToDouble(io.entradaDados(mensagemAltura));
+                    double valorPeso = conversor.StringToDouble(io.entradaDados(mensagemPeso));
+                    imc.cadastrarDados(valorPeso, valorAltura);
                     break;
                 case 2:
-
+                    String mensagemDados = "Dados\n\nPeso: "+imc.getPeso()+"\nAltura: "+imc.getAltura();
+                    io.saidaDados(mensagemDados);
                     break;
                 case 3:
-
+                    imc.calcularImc();
+                    String mensagemCalc = "Cálculo: Peso/Altura^2\n\nResultado: "+imc.getImc();
+                    io.saidaDados(mensagemCalc);
                     break; 
                 case 4:
-
+                    situacao.verificarSituacao(imc);
+                    io.saidaDados(situacao.getSituacao());
                     break;
                 case 5:
                     io.saidaDados("Finalizando Programa!");

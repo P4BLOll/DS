@@ -68,11 +68,15 @@ public class IMC {
     }
     
     public double calcularImc(){
-        return(0);
+        setImc(getPeso()/Math.pow(getAltura(), 2));
+        return getImc();
+        
     }
     
     public void cadastrarDados(Double peso, Double altura){
-    setPeso(JOptionPane.showInputDialog(""));
+          setPeso(peso);
+          setAltura(altura);
+
     
     }
 }
